@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HiDownload, HiMail } from 'react-icons/hi';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaHackerrank } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Hero = () => {
@@ -87,6 +87,14 @@ const Hero = () => {
               className={`${currentTheme.textMuted} hover:${currentTheme.accent} transition-colors duration-200`}
             >
               <FaLinkedin className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.hackerrank.com/profile/amarendraeediga"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${currentTheme.textMuted} hover:${currentTheme.accent} transition-colors duration-200`}
+            >
+              <FaHackerrank className="h-6 w-6" />
             </a>
           </div>
         </div>

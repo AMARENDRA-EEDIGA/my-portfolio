@@ -11,15 +11,15 @@ const ThemeSwitcher = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`p-2 rounded-lg ${currentTheme.cardBg} ${currentTheme.textMuted} hover:${currentTheme.text} transition-all duration-200 ${currentTheme.border} border shadow-sm`}
+        className={`p-3 rounded-xl ${currentTheme.cardBg} ${currentTheme.textMuted} hover:${currentTheme.accent} transition-all duration-200 ${currentTheme.border} border shadow-lg hover:shadow-xl hover:scale-105 backdrop-blur-sm`}
       >
         <HiColorSwatch className="h-5 w-5" />
       </button>
 
       {isOpen && (
-        <div className={`absolute right-0 mt-2 w-48 ${currentTheme.cardBg} rounded-lg shadow-lg ${currentTheme.border} border z-50 backdrop-blur-sm overflow-hidden`}>
-          <div className="p-2 space-y-1">
-            <p className={`text-xs ${currentTheme.textMuted} mb-2 px-2`}>Choose Theme</p>
+        <div className={`absolute right-0 mt-3 w-52 ${currentTheme.cardBg} rounded-xl shadow-2xl ${currentTheme.border} border z-50 backdrop-blur-md overflow-hidden`}>
+          <div className="p-3 space-y-1">
+            <p className={`text-xs ${currentTheme.textMuted} mb-3 px-2 font-medium uppercase tracking-wider`}>Choose Theme</p>
             {Object.entries(themes).map(([key, themeData]) => (
               <button
                 key={key}
@@ -27,10 +27,10 @@ const ThemeSwitcher = () => {
                   setTheme(key);
                   setIsOpen(false);
                 }}
-                className={`w-full text-left px-3 py-2 rounded text-sm transition-colors duration-200 ${
+                className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                   theme === key
-                    ? `${currentTheme.accentBg} text-white`
-                    : `${currentTheme.text} hover:${currentTheme.bg}`
+                    ? `${currentTheme.accentBg} text-white shadow-md`
+                    : `${currentTheme.text} hover:${currentTheme.bg} hover:scale-105`
                 }`}
               >
                 {themeData.name}

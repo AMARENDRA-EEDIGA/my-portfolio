@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaHeart, FaHackerrank } from 'react-icons/fa';
 import { HiMail, HiArrowUp } from 'react-icons/hi';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -41,12 +41,20 @@ const Footer = () => {
                 <FaGithub className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com/in/amarendra-eediga"
+                href="https://linkedin.com/in/eediga-amarendra"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${currentTheme.textMuted} hover:${currentTheme.accent} transition-colors duration-200`}
               >
                 <FaLinkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.hackerrank.com/profile/amarendraeediga"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${currentTheme.textMuted} hover:${currentTheme.accent} transition-colors duration-200`}
+              >
+                <FaHackerrank className="h-6 w-6" />
               </a>
               <a
                 href="mailto:eediga.amarendra2002@gmail.com"

@@ -23,12 +23,13 @@ const About = () => {
             </h3>
             <p className={`${currentTheme.textMuted} mb-6 leading-relaxed`}>
               I'm a B.Sc graduate in Computers, Mathematics, and Electronics from SV Degree & PG College, Anantapur. 
-              Currently working as a Software Developer at Megovation Pvt Ltd, where I specialize in Odoo ERP 
+              Recently worked as a Software Developer at Megovation Pvt Ltd, where I specialized in Odoo ERP 
               customization and Django web development.
             </p>
             <p className={`${currentTheme.textMuted} mb-8 leading-relaxed`}>
               My journey includes hands-on experience with enterprise solutions, full-stack development, 
-              and QA automation. I'm passionate about building scalable applications and solving complex business problems.
+              and QA automation. I'm passionate about building scalable applications and solving complex business problems. 
+              Currently seeking new opportunities to contribute my skills.
             </p>
             
             {/* Quick Stats */}

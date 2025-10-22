@@ -11,10 +11,10 @@ const Experience = () => {
       company: 'Megovation Pvt Ltd',
       period: 'Dec 2024 – Sep 2025',
       description: [
-        'Developing and maintaining Django web applications',
-        'Leading Odoo ERP customization projects',
-        'Implementing REST APIs and database optimization',
-        'Collaborating with cross-functional teams'
+        'Led Odoo ERP customization projects',
+        'Developed and maintained Django web applications',
+        'Implemented REST APIs and database optimization',
+        'Collaborated with cross-functional teams'
       ],
       technologies: ['Python', 'Django', 'Odoo', 'PostgreSQL', 'REST API'],
       current: false
@@ -39,10 +39,9 @@ const Experience = () => {
       company: 'Long-term Program',
       period: 'Dec 2023 – May 2024',
       description: [
-        'Developing enterprise Java applications',
-        'Working with Spring Boot framework',
-        'Implementing automated testing with JUnit',
-        'Learning advanced Java concepts and patterns'
+        'Worked with Spring Boot framework',
+        'Implemented automated testing with JUnit',
+        'Learned advanced Java concepts and patterns'
       ],
       technologies: ['Java', 'Spring Boot', 'JUnit', 'MySQL'],
       current: false
@@ -53,7 +52,6 @@ const Experience = () => {
       company: 'Amazon Web Services',
       period: 'Sep 2023 – Nov 2023',
       description: [
-        'Completed hands-on projects with AWS ML services',
         'Built machine learning models using SageMaker',
         'Implemented AI solutions for real-world problems',
         'Earned certification in AWS AI/ML fundamentals'
@@ -66,7 +64,7 @@ const Experience = () => {
   const education = {
     degree: 'B.Sc (Computers, Mathematics, Electronics)',
     institution: 'SV Degree & PG College, Anantapur',
-    period: '2020 – 2023',
+    period: '2021 – 2024',
     description: 'Comprehensive study in computer science fundamentals, mathematics, and electronics'
   };
 

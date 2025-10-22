@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaHackerrank } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Contact = () => {
@@ -101,12 +101,20 @@ const Contact = () => {
                   <FaGithub className={`h-6 w-6 ${currentTheme.textMuted} hover:text-white`} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/amarendra-eediga"
+                  href="https://linkedin.com/in/eediga-amarendra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-12 h-12 ${currentTheme.cardBg} hover:${currentTheme.accentBg} rounded-lg flex items-center justify-center transition-colors duration-200 ${currentTheme.border} border`}
                 >
                   <FaLinkedin className={`h-6 w-6 ${currentTheme.textMuted} hover:text-white`} />
+                </a>
+                <a
+                  href="https://www.hackerrank.com/profile/amarendraeediga"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-12 h-12 ${currentTheme.cardBg} hover:${currentTheme.accentBg} rounded-lg flex items-center justify-center transition-colors duration-200 ${currentTheme.border} border`}
+                >
+                  <FaHackerrank className={`h-6 w-6 ${currentTheme.textMuted} hover:text-white`} />
                 </a>
               </div>
             </div>
