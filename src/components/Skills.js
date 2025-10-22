@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   SiPython, SiDjango, SiJavascript, SiPostgresql, SiMysql, 
-  SiGit, SiSelenium, SiReact, SiTailwindcss, SiAmazonaws 
+  SiGit, SiSelenium, SiTailwindcss 
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
