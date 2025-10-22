@@ -86,7 +86,7 @@ const Footer = () => {
         <div className={`border-t ${currentTheme.border} mt-12 pt-8 flex flex-col md:flex-row justify-between items-center`}>
           <div className={`${currentTheme.textMuted} text-sm mb-4 md:mb-0`}>
             <p className="flex items-center">
-              © 2024 Amarendra Eediga. Made with 
+              © {new Date().getFullYear()} Amarendra Eediga. Made with 
               <FaHeart className="h-4 w-4 text-red-500 mx-1" /> 
               using React & TailwindCSS
             </p>
