@@ -1,6 +1,3 @@
-# my-portfolio
-Responsive React + TailwindCSS portfolio with 3 theme modes (Modern, Dark, Gradient); frontend-only, API-ready.
-
 # Amarendra Eediga - Portfolio Website
 
 A modern, responsive portfolio website built with React and TailwindCSS featuring dynamic themes and professional design.
