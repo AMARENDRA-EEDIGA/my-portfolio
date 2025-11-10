@@ -2,6 +2,17 @@
 export const projectsData = [
   {
     id: 1,
+    title: "Ama Sarees – Complete Saree Shop Management System",
+    description: "Production-ready saree business management app with role-based login, live inventory tracking, customer management, order history, PDF invoices, and business analytics dashboard. Built to solve real business problems.",
+    technologies: ["React 18", "TypeScript", "Django", "Vite", "TailwindCSS", "jsPDF"],
+    image: "/images/ama-sarees.jpg",
+    github: "https://github.com/AMARENDRA-EEDIGA/Amma-Sarees",
+    live: "https://ama-sarees.vercel.app/",
+    category: "Business",
+    featured: true
+  },
+  {
+    id: 2,
     title: "Odoo ERP Customization",
     description: "Comprehensive ERP solution with custom modules for inventory management, sales automation, and financial reporting.",
     technologies: ["Python", "Odoo", "PostgreSQL", "XML", "JavaScript"],
@@ -12,7 +23,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "Django Migration & Full Stack Development",
     description: "Complete migration of legacy system to Django with modern frontend, REST API, and automated deployment.",
     technologies: ["Django", "React"],
@@ -23,7 +34,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Data Safeguard Project",
     description: "Enterprise data protection system with encryption, backup automation, and compliance monitoring.",
     technologies: ["Python", "ydata-synthetic", "Great Expectations", "Pydantic", "PostgreSQL"],
@@ -34,7 +45,7 @@ export const projectsData = [
     featured: false
   },
   {
-    id: 4,
+    id: 5,
     title: "Shrestha - Business Management",
     description: "Complete business management solution with CRM, inventory, and financial modules.",
     technologies: ["HTML", "CSS", "Bootstrap"],
@@ -45,7 +56,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Meat-Market E-commerce",
     description: "Online marketplace for meat products with order management, payment integration, and delivery tracking.",
     technologies: ["HTML", "CSS", "Bootstrap"],
@@ -56,7 +67,7 @@ export const projectsData = [
     featured: false
   },
   {
-    id: 6,
+    id: 7,
     title: "Library Management System",
     description: "Digital library system with book cataloging, member management, and automated fine calculation.",
     technologies: ["Python", "Tkinter", "openpyxl", "pathlib", "os", "Pillow"],

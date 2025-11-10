@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HiExternalLink, HiCode } from 'react-icons/hi';
+import { HiExternalLink, HiCode, HiChevronDown, HiChevronUp } from 'react-icons/hi';
 import { fetchProjects } from '../data/mockData';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -10,6 +10,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filter, setFilter] = useState('all');
+  const [expandedProjects, setExpandedProjects] = useState({});
 
   // Fetch projects on component mount
   useEffect(() => {
@@ -35,6 +36,14 @@ const Projects = () => {
 
   // Get unique categories for filter buttons
   const categories = ['all', ...new Set(projects.map(p => p.category.toLowerCase()))];
+
+  // Toggle project expansion
+  const toggleExpanded = (projectId) => {
+    setExpandedProjects(prev => ({
+      ...prev,
+      [projectId]: !prev[projectId]
+    }));
+  };
 
   // Loading state
   if (loading) {
@@ -138,23 +147,51 @@ const Projects = () => {
                   )}
                 </div>
 
-                <p className={`${currentTheme.textMuted} text-sm mb-4 line-clamp-3`}>
-                  {project.description}
-                </p>
+                {/* Description */}
+                <div className="mb-4">
+                  <p className={`${currentTheme.textMuted} text-sm ${
+                    expandedProjects[project.id] ? '' : 'line-clamp-2'
+                  }`}>
+                    {project.description}
+                  </p>
+                  {project.description.length > 120 && (
+                    <button
+                      onClick={() => toggleExpanded(project.id)}
+                      className={`${currentTheme.accent} text-xs mt-1 hover:underline flex items-center`}
+                    >
+                      {expandedProjects[project.id] ? (
+                        <>
+                          Show less <HiChevronUp className="ml-1 h-3 w-3" />
+                        </>
+                      ) : (
+                        <>
+                          Show more <HiChevronDown className="ml-1 h-3 w-3" />
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 5).map((tech, index) => (
-                    <span
-                      key={index}
-                      className={`${currentTheme.bg} ${currentTheme.text} text-xs px-2 py-1 rounded ${currentTheme.border} border`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className={`${currentTheme.textMuted} text-xs`}>+{project.technologies.length - 3}</span>
-                  )}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {(expandedProjects[project.id] ? project.technologies : project.technologies.slice(0, 3)).map((tech, index) => (
+                      <span
+                        key={index}
+                        className={`${currentTheme.bg} ${currentTheme.text} text-xs px-2 py-1 rounded ${currentTheme.border} border`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && !expandedProjects[project.id] && (
+                      <button
+                        onClick={() => toggleExpanded(project.id)}
+                        className={`${currentTheme.textMuted} hover:${currentTheme.accent} text-xs px-2 py-1 rounded transition-colors`}
+                      >
+                        +{project.technologies.length - 3} more
+                      </button>
+                    )}
+                  </div>
                 </div>
 
                 {/* Action Buttons */}
