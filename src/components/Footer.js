@@ -96,7 +96,6 @@ const Footer = () => {
             <p className="flex items-center">
               © {new Date().getFullYear()} Amarendra Eediga. Made with 
               <FaHeart className="h-4 w-4 text-red-500 mx-1" /> 
-              using React & TailwindCSS
             </p>
           </div>
           
